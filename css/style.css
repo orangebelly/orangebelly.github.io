@@ -1,0 +1,367 @@
+/* Media queries for responsiveness */
+
+@media screen and (max-width: 1300px) {
+    .floating-content h1 {
+        font-size: 5rem;
+    }
+
+    .floating-content p {
+        font-size: 2rem;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+    }
+
+    .button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .floating-content h1 {
+        font-size: 4rem;
+    }
+
+    .floating-content p {
+        font-size: 1.5rem;
+    }
+
+    .main-nav ul {
+        gap: 10px;
+    }
+
+    .button {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .social-icons {
+        display: none;
+    }
+
+    .main-nav {
+        display: none;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #333;
+        z-index: 1000;
+    }
+
+    .main-nav ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .main-nav ul li {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .main-nav ul li a {
+        font-size: 20px;
+        color: white;
+        text-align: center;
+        display: block;
+        padding: 10px 0;
+        text-decoration: none;
+    }
+}
+
+/* Global body and HTML settings */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Merriweather", Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header layout */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: none;
+}
+
+/* Logo styling */
+
+.logo {
+    flex: 1;
+}
+
+.logo h1 {
+    color: white;
+    font-size: 2rem;
+    margin: 0;
+}
+
+/* Main navigation styling */
+
+.main-nav {
+    flex: 2;
+    text-align: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav ul li {
+    margin-left: 20px;
+}
+
+.main-nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s;
+}
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid white;
+}
+
+/* Social icons styling */
+
+.social-icons {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-right: 30px;
+}
+
+.social-icons a img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(0) invert(1);
+}
+
+/* Image container settings */
+
+.image-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Floating content settings */
+
+.floating-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    z-index: 2;
+}
+
+.floating-content h1 {
+    font-size: 8.1rem;
+    font-weight: 600;
+    font-family: "Xanh Mono", Arial, sans-serif;
+    margin-bottom: 20px;
+    text-shadow: #9AC0CD 1px 0 10px;
+}
+
+.floating-content p {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    text-shadow: #9AC0CD 1px 0 10px;
+}
+
+.button {
+    display: inline-block;
+    background-color: white;
+    color: #0f297a;
+    padding: 10px 20px;
+    margin: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.button:hover {
+    background-color: rgb(3, 27, 80);
+    color: white;
+}
+
+/* Tour info section styling */
+
+.tour-info {
+    background-color: #445A91;
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    border-top: 2px solid #333;
+}
+
+.tour-info h2 {
+    font-size: 3.5rem;
+    margin-bottom: 5px;
+    font-family: "Merriweather", Arial, sans-serif;
+}
+
+.tour-info p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.tour-info .button {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    padding: 10px 20px;
+    text-decoration: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.tour-info .button:hover {
+    background-color: black;
+    color: white;
+}
+
+/* Schedule styling */
+
+.schedule-container {
+    width: 80%;
+    margin: 50px auto;
+}
+
+.schedule-row {
+    display: grid;
+    grid-template-columns: 2fr 4fr 2fr 1fr;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.schedule-row:last-child {
+    border-bottom: none;
+}
+
+.date,
+.venue,
+.location,
+.more-info {
+    padding: 10px;
+}
+
+.date {
+    font-size: 16px;
+}
+
+.venue {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.location {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.more-info {
+    font-size: 14px;
+    color: #bbb;
+    text-align: right;
+}
+
+/* Footer styling */
+
+footer {
+    background-color: #1c1c1c;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid #333;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    font-size: 0.9rem;
+    color: #aaaaaa;
+}
+
+.footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #aaaaaa;
+    font-size: 0.9rem;
+    transition: color 0.3s;
+}
+
+.footer-nav ul li a:hover {
+    color: white;
+}
+
+.footer-content .social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-content .social-icons a img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1);
+    transition: filter 0.3s ease;
+}
+
+.footer-content .social-icons a img:hover {
+    filter: brightness(1) invert(0);
+}
